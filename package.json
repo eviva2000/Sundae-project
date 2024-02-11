@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "workspaces": [
+    "sundae",
+    "sundae-server"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently \"cd sundae-server && npm start\" \"cd sundae && npm start\"",
-    "build": "npm run build --prefix sundae"
+    "build": "npm run build --prefix sundae",
+    "start-prod": "node ./sundae-server/server.js"
   },
   "keywords": [],
   "author": "",
